@@ -58,6 +58,8 @@ long long int getInversionCount(long long arr[], long long tmp[], int left, int 
     return inversion_count;
 }
 
+// Time Complexity: O(n * log n)
+// Auxiliary Space: O(n)
 long long int inversionCount(long long arr[], long long N)
 {
     long long tmp[N];
