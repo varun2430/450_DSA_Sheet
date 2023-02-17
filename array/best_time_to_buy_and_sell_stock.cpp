@@ -9,12 +9,9 @@ int maxProfit(vector<int>& prices)
     int buy=prices[0], max_profit=0;
     for(int i=1 ; i < n ; i++)
     {
-        if(buy > prices[i])
-        {
-            buy = prices[i];
-        }
-
         max_profit = max(max_profit, prices[i]-buy);
+
+        buy = min(buy, prices[i]);
     }
 
     return max_profit;
