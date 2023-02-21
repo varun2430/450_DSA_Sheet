@@ -16,7 +16,7 @@ struct Node *reverseListIterative(struct Node *head)
     while (curr != nullptr)
     {
         next = curr->next;
-        curr->next = prev; // curr now points to prev
+        curr->next = prev;          // curr now points to prev
         prev = curr;
         curr = next;
     }
@@ -28,15 +28,16 @@ struct Node *reverseListIterative(struct Node *head)
 
 struct Node *reverseListRecursive(struct Node *head)
 {
-    if (head == NULL || head->next == NULL)
+    if( (head == nullptr) || (head->next == nullptr) )
     {
         return head;
     }
 
-    Node *rest = reverseListRecursive(head->next);
-    head->next->next = head;
+    Node *new_head = reverseListRecursive(head->next);
 
-    head->next = NULL;
+    Node *next = head->next;
+    next->next = head;          // next now points to curr
+    head->next = nullptr;       // curr now points to null
 
-    return rest;
+    return new_head;
 }
