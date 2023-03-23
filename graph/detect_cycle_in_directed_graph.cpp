@@ -1,7 +1,45 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
+bool dfs(int vertex, vector<int> adj[], vector<bool> &visited, vector<bool> &pathVisited)
 {
-    return 0;
+    visited[vertex] = true;
+    pathVisited[vertex] = true;
+
+    for (auto adjVer : adj[vertex])
+    {
+        if (!visited[adjVer])
+        {
+            if (dfs(adjVer, adj, visited, pathVisited) == true)
+            {
+                return true;
+            }
+        }
+        else if (pathVisited[adjVer] == true)
+        {
+            return true;
+        }
+    }
+
+    pathVisited[vertex] = false;
+    return false;
+}
+
+bool isCyclic(int V, vector<int> adj[])
+{
+    vector<bool> visited(V, false);
+    vector<bool> pathVisited(V, false);
+
+    for (int i = 0; i < V; i++)
+    {
+        if (!visited[i])
+        {
+            if (dfs(i, adj, visited, pathVisited) == true)
+            {
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
