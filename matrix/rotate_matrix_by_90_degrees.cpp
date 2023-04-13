@@ -40,17 +40,3 @@ void printMatrix(vector<vector<int>>& matrix)
     }
     cout << endl;
 }
-
-int main()
-{
-    vector<vector<int>> matrix = {  { 1, 2, 3, 4 },
-                                    { 5, 6, 7, 8 },
-                                    { 9, 10, 11, 12 },
-                                    { 13, 14, 15, 16 } };
-
-    printMatrix(matrix);
-    rotateClockwise(matrix);
-    printMatrix(matrix);
-
-    return 0;
-}
