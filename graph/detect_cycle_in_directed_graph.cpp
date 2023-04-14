@@ -25,7 +25,7 @@ bool dfs(int vertex, vector<int> adj[], vector<bool> &visited, vector<bool> &pat
     return false;
 }
 
-bool isCyclic(int V, vector<int> adj[])
+bool isCyclicDfs(int V, vector<int> adj[])
 {
     vector<bool> visited(V, false);
     vector<bool> pathVisited(V, false);
@@ -42,4 +42,51 @@ bool isCyclic(int V, vector<int> adj[])
     }
 
     return false;
+}
+
+bool isCyclicBfs(int V, vector<int> adj[])
+{
+    int inDegree[V] = {0};
+    for (int i = 0; i < V; i++)
+    {
+        for (int &adjNode : adj[i])
+        {
+            inDegree[adjNode]++;
+        }
+    }
+
+    queue<int> q;
+    for (int i = 0; i < V; i++)
+    {
+        if (inDegree[i] == 0)
+        {
+            q.push(i);
+        }
+    }
+
+    vector<int> topo;
+    while (!q.empty())
+    {
+        int node = q.front();
+        q.pop();
+
+        topo.push_back(node);
+
+        for (int &adjNode : adj[node])
+        {
+            inDegree[adjNode]--;
+
+            if (inDegree[adjNode] == 0)
+            {
+                q.push(adjNode);
+            }
+        }
+    }
+
+    if (topo.size() == V)
+    {
+        return false;
+    }
+
+    return true;
 }
