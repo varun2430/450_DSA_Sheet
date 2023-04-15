@@ -1,5 +1,13 @@
-#include<iostream>
-#include<vector>
+// Given an array Arr[] that contains N integers (may be positive, negative or zero). 
+// Find the product of the maximum product subarray.
+
+// Example:
+// Input:
+// N = 5
+// Arr[] = {6, -3, -10, 0, 2}
+// Output: 180
+
+#include<bits/stdc++.h>
 using namespace std;
 
 long long maxProduct(vector<int>& arr)

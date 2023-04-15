@@ -1,11 +1,21 @@
-#include<iostream>
+// Given an array A of size N of integers. Your task is to find the minimum and maximum elements in the array.
+
+// Example
+// Input:
+// N = 6
+// A[] = {3, 2, 1, 56, 10000, 167}
+// Output:
+// min = 1, max =  10000
+
+#include<bits/stdc++.h>
+using namespace std;
 
 void getMinMax(int arr[], int n)
 {
     if(n == 1)
     {
-        std::cout << "max: " << arr[0] << std::endl;
-        std::cout << "min: " << arr[0] << std::endl;
+        cout << "max: " << arr[0] << endl;
+        cout << "min: " << arr[0] << endl;
     }
 
     int max=0, min=0;
@@ -33,8 +43,8 @@ void getMinMax(int arr[], int n)
         }
     }
 
-    std::cout << "max: " << max << std::endl;
-    std::cout << "min: " << min << std::endl;
+    cout << "max: " << max << endl;
+    cout << "min: " << min << endl;
 }
 
 int main()

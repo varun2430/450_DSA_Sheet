@@ -1,6 +1,10 @@
-#include<iostream>
-#include<vector>
-#include<cmath>
+// Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+// Example:
+// Input: nums = [3,2,3]
+// Output: [3]
+
+#include<bits/stdc++.h>
 using namespace std;
 
 vector<int> majorityElement(vector<int> &nums)

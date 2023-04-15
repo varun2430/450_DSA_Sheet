@@ -1,5 +1,13 @@
-#include <iostream>
-#include <unordered_map>
+// Given an array of N integers, and an integer K, find the number of pairs of elements 
+// in the array whose sum is equal to K.
+
+// Example:
+// Input:
+// N = 4, K = 6
+// arr[] = {1, 5, 7, 1}
+// Output: 2
+
+#include <bits/stdc++.h>
 using namespace std;
 
 // can be modified to get paires

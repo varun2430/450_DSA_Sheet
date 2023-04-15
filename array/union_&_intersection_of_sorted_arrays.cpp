@@ -1,3 +1,14 @@
+// Given two arrays a[] and b[] of size n and m respectively. The task is to find the 
+// union and intersection between the two arrays.
+
+// Input:
+// 5 3
+// 1 2 3 4 5
+// 1 2 3
+// Output: 
+// 1 2 3 4 5
+// 1 2 3
+
 #include<bits/stdc++.h>
 using namespace std;
 

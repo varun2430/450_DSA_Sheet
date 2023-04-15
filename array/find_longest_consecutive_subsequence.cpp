@@ -1,5 +1,15 @@
-#include<iostream>
-#include<unordered_set>
+// Given an array of positive integers. Find the length of the longest sub-sequence 
+// such that elements in the subsequence are consecutive integers, the consecutive 
+// numbers can be in any order.
+
+// Example:
+// Input:
+// N = 7
+// a[] = {2,6,1,9,4,5,3}
+// Output:
+// 6
+
+#include<bits/stdc++.h>
 using namespace std;
 
 int findLongestConseqSubseq(int arr[], int N)

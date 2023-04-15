@@ -1,6 +1,10 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+// Given an integer N, find its factorial. return a list of integers denoting the digits that make up the factorial of N.
+
+// Example:
+// Input: N = 10
+// Output: 3628800
+
+#include<bits/stdc++.h>
 using namespace std;
 
 void multiply(vector<int> &res, int x)
@@ -49,7 +53,7 @@ void print_vector(vector<int>& v)
 
 int main()
 {
-    vector<int> res = factorial(1000);
+    vector<int> res = factorial(10);
 
     print_vector(res);
 

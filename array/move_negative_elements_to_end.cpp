@@ -1,11 +1,20 @@
-#include<iostream>
-#include<vector>
+// Given an unsorted array arr[] of size N having both negative and positive integers. 
+// The task is place all negative element at the end of array without changing the 
+// order of positive element and negative element.
+
+// Example:
+// Input : 
+// N = 8
+// arr[] = {1, -1, 3, 2, -7, -5, 11, 6 }
+
+#include<bits/stdc++.h>
+using namespace std;
 
 // Time Complexity : O(n) 
 // Auxiliary space : O(n)
 void moveNegative(int arr[], int n)
 {
-    std::vector<int> v;
+    vector<int> v;
 
     int itr=0;
     for(int i=0 ; i < n ; i++)
@@ -31,15 +40,15 @@ void moveNegative(int arr[], int n)
     }
 }
 
-// can be implemented in constant time using modified insersion sort
+// can be implemented in constant space using modified insersion sort
 
 void print_array(int arr[], int n)
 {
     for(int i=0 ; i < n ; i++)
     {
-        std::cout << arr[i] << "  ";
+        cout << arr[i] << "  ";
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 int main()
