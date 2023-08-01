@@ -1,11 +1,12 @@
-// Given an array of positive integers nums and a positive integer target, return the minimal length of a 
-// subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+// Given an array of positive integers nums and a positive integer target, return the
+// minimal length of a subarray whose sum is greater than or equal to target. If there is
+// no such subarray, return 0 instead.
 
 // Example:
-// Input: target = 7, nums = [2,3,1,2,4,3]
+// Input:  target = 7, nums = [2,3,1,2,4,3]
 // Output: 2
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int minSubArrayLen(int target, vector<int> &nums)
@@ -19,7 +20,7 @@ int minSubArrayLen(int target, vector<int> &nums)
     {
         sum += nums[end];
 
-        while (sum >= target)       // reduce the size of window from left to get min_len
+        while (sum >= target) // reduce the size of window from left to get min_len
         {
             min_len = min(min_len, end - start + 1);
 
@@ -28,13 +29,4 @@ int minSubArrayLen(int target, vector<int> &nums)
     }
 
     return (min_len == INT_MAX) ? 0 : min_len;
-}
-
-int main()
-{
-    vector<int> v = {2,3,1,2,4,3};
-
-    cout << minSubArrayLen(7, v) << endl;
-
-    return 0;
 }

@@ -2,38 +2,36 @@
 // For each tower, you must perform exactly one of the following operations exactly once.
 // Increase the height of the tower by K
 // Decrease the height of the tower by K
-// Find out the minimum possible difference between the height of the shortest and tallest 
+// Find out the minimum possible difference between the height of the shortest and tallest
 // towers after you have modified each tower.
 
 // Example:
-// Input:
-// K = 2, N = 4
-// Arr[] = {1, 5, 8, 10}
-// Output:
-// 5
+// Input:  K = 2, N = 4
+//         Arr[] = {1, 5, 8, 10}
+// Output: 5
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int getMinDif(int arr[], int n, int k)
 {
-    sort(arr, arr+n);
+    sort(arr, arr + n);
 
-    int diff = arr[n-1] - arr[0];
+    int diff = arr[n - 1] - arr[0];
     int tmp_min = arr[0];
-    int tmp_max = arr[n-1];
+    int tmp_max = arr[n - 1];
 
-    for(int i=0 ; i < n ; i++)
+    for (int i = 0; i < n; i++)
     {
-        if(arr[i] < k)
+        if (arr[i] < k)
         {
             continue;
         }
 
         tmp_min = min(arr[0] + k, arr[i] - k);
-        tmp_max = max(arr[n-1] - k, arr[i-1] + k);
+        tmp_max = max(arr[n - 1] - k, arr[i - 1] + k);
 
-        diff = min(diff, tmp_max-tmp_min);
+        diff = min(diff, tmp_max - tmp_min);
     }
 
     return diff;

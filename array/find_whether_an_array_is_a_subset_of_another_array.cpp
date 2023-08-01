@@ -1,14 +1,12 @@
-// Given two arrays: a1[0..n-1] of size n and a2[0..m-1] of size m. Task is to check 
-// whether a2[] is a subset of a1[] or not. Both the arrays can be sorted or unsorted. 
+// Given two arrays: a1[0..n-1] of size n and a2[0..m-1] of size m. Task is to check
+// whether a2[] is a subset of a1[] or not. Both the arrays can be sorted or unsorted.
 
 // Example:
-// Input:
-// a1[] = {11, 1, 13, 21, 3, 7}
-// a2[] = {11, 3, 7, 1}
-// Output:
-// Yes
+// Input:  a1[] = {11, 1, 13, 21, 3, 7}
+//         a2[] = {11, 3, 7, 1}
+// Output: Yes
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // can be done in O(nLog(n) + mLog(m)) and constant space using sorting
@@ -33,16 +31,4 @@ bool isSubset(int a1[], int a2[], int n, int m)
     }
 
     return true;
-}
-
-int main()
-{
-    int arr1[] = { 11, 1, 13, 21, 3, 7 };
-    int arr2[] = { 11, 3, 7, 1 };
-    const int n = sizeof(arr1) / sizeof(arr1[0]);
-    const int m = sizeof(arr2) / sizeof(arr2[0]);
-
-    cout << isSubset(arr1, arr2, n, m) << endl;
-
-    return 0;
 }

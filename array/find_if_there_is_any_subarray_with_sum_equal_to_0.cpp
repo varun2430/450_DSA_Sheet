@@ -1,11 +1,10 @@
-// Given an array of positive and negative numbers. Find if there is a subarray (of size at-least one) with 0 sum.
+// Given an array of positive and negative numbers. Find if there is a subarray
+// (of size at-least one) with 0 sum.
 
 // Example:
-// Input:
-// 5
-// 4 2 -3 1 6
-// Output: 
-// Yes
+// Input:  5
+//         4 2 -3 1 6
+// Output: Yes
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,7 +14,7 @@ bool subArrayExists(int arr[], int n)
     unordered_map<int, int> cumSum;
 
     int sum = 0;
-    for (int i=0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         sum += arr[i];
 
@@ -28,14 +27,4 @@ bool subArrayExists(int arr[], int n)
     }
 
     return false;
-}
-
-int main()
-{
-    int arr[] = {1, 4, -2, -2, 5, -4, 3};
-    const int n = sizeof(arr) / sizeof(arr[0]);
-
-    cout << subArrayExists(arr, n) << endl;
-
-    return 0;
 }

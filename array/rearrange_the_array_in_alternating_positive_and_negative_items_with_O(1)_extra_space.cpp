@@ -1,14 +1,12 @@
-// Given an unsorted array Arr of N positive and negative numbers. Your task is to create 
-// an array of alternate positive and negative numbers without changing the relative order 
+// Given an unsorted array Arr of N positive and negative numbers. Your task is to create
+// an array of alternate positive and negative numbers without changing the relative order
 // of positive and negative numbers.
 // Note: Array should start with a positive number.
 
 // Example:
-// Input: 
-// N = 9
-// Arr[] = {9, 4, -2, -1, 5, 0, -5, -3, 2}
-// Output:
-// 9 -2 4 -1 5 -5 0 -3 2
+// Input:  N = 9
+//         Arr[] = {9, 4, -2, -1, 5, 0, -5, -3, 2}
+// Output: 9 -2 4 -1 5 -5 0 -3 2
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -56,28 +54,4 @@ void rearrange(int arr[], int n)
             }
         }
     }
-}
-
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << "  ";
-    }
-    cout << endl;
-}
-
-int main()
-{
-
-    int arr[] = {-5, -2, 5, 2, 4, 7, 1, 8, 0, -8};
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    printArray(arr, n);
-
-    rearrange(arr, n);
-
-    printArray(arr, n);
-
-    return 0;
 }

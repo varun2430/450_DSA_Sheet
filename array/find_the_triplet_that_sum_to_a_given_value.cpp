@@ -1,14 +1,12 @@
-// Given an array arr of size n and an integer X. Find if there's a triplet in the 
-// array which sums up to the given integer X.
+// Given an array arr of size n and an integer X. Find if there's a triplet in the array
+// which sums up to the given integer X.
 
 // Example:
-// Input:
-// n = 6, X = 13
-// arr[] = [1 4 45 6 10 8]
-// Output:
-// 1
+// Input:  n = 6, X = 13
+//         arr[] = [1 4 45 6 10 8]
+// Output: 1
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 bool find3Numbers(int A[], int n, int X)
@@ -45,14 +43,4 @@ bool find3Numbers(int A[], int n, int X)
     }
 
     return false;
-}
-
-int main()
-{
-    int arr[] = {1, 4, 45, 6, 10, 8};
-    const int n = sizeof(arr) / sizeof(arr[0]);
-
-    cout << find3Numbers(arr, n , 13) << endl;
-
-    return 0;
 }

@@ -1,13 +1,13 @@
-// Given an array arr of n positive integers and a number k. One can apply a swap operation
-// on the array any number of times, i.e choose any two index i and j (i < j) and
-// swap arr[i] , arr[j] . Find the minimum number of swaps required to bring all the numbers
-// less than or equal to k together, i.e. make them a contiguous subarray.
+// Given an array arr of n positive integers and a number k. One can apply a swap
+// operation on the array any number of times, i.e choose any two index i and j (i < j)
+// and swap arr[i] , arr[j] . Find the minimum number of swaps required to bring all the
+// numbers less than or equal to k together, i.e. make them a contiguous subarray.
 
 // Example:
 // Input:  arr[ ] = {2, 7, 9, 5, 8, 7, 4}   K = 6
-// Output:  2
+// Output: 2
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int minSwap(int arr[], int n, int k)

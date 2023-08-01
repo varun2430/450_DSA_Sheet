@@ -1,16 +1,15 @@
-// Given an array Arr[] that contains N integers (may be positive, negative or zero). 
+// Given an array Arr[] that contains N integers (may be positive, negative or zero).
 // Find the product of the maximum product subarray.
 
 // Example:
-// Input:
-// N = 5
-// Arr[] = {6, -3, -10, 0, 2}
+// Input:  N = 5
+//         Arr[] = {6, -3, -10, 0, 2}
 // Output: 180
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-long long maxProduct(vector<int>& arr)
+long long maxProduct(vector<int> &arr)
 {
     const int n = arr.size();
 
@@ -30,13 +29,4 @@ long long maxProduct(vector<int>& arr)
     }
 
     return max_so_far;
-}
-
-int main()
-{
-    vector<int> arr = { 1, -2, -3, 0, 7, -8, -2 };
-
-    cout << maxProduct(arr) << endl;
-
-    return 0;
 }

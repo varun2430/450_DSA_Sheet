@@ -1,21 +1,21 @@
-// Given an array of size n and a range [a, b]. The task is to partition the array around the range such that 
-// array is divided into three parts.
-// 1) All elements smaller than a come first.
-// 2) All elements in range a to b come next.
-// 3) All elements greater than b appear in the end.
-// The individual elements of three sets can appear in any order. You are required to return the modified array.
+// Given an array of size n and a range [a, b]. The task is to partition the array around
+// the range such that array is divided into three parts.
+//      1) All elements smaller than a come first.
+//      2) All elements in range a to b come next.
+//      3) All elements greater than b appear in the end.
+// The individual elements of three sets can appear in any order. You are required to
+// return the modified array.
 
 // Example:
-// Input: 
-// n = 5
-// A[] = {1, 2, 3, 3, 4}
-// [a, b] = [1, 2]
+// Input:  n = 5
+//         A[] = {1, 2, 3, 3, 4}
+//         [a, b] = [1, 2]
 // Output: 1
 
 #include <bits/stdc++.h>
 using namespace std;
 
-void threeWayPartition(vector<int>& array, int a, int b)
+void threeWayPartition(vector<int> &array, int a, int b)
 {
     int left = 0;
     int right = array.size() - 1;
@@ -34,24 +34,4 @@ void threeWayPartition(vector<int>& array, int a, int b)
             i--;
         }
     }
-}
-
-void printArray(vector<int>& array)
-{
-    for(int& num : array)
-    {
-        cout << num << "  ";
-    }
-    cout << endl;
-}
-
-int main()
-{
-    vector<int> array = {1, 14, 5, 20, 4, 2, 54, 20, 87, 98, 3, 1, 32};
-
-    printArray(array);
-    threeWayPartition(array, 14, 20);
-    printArray(array);
-
-    return 0;
 }

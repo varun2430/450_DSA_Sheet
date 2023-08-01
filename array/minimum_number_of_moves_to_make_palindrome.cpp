@@ -1,10 +1,11 @@
-// You are given a string s consisting only of lowercase English letters.
-// In one move, you can select any two adjacent characters of s and swap them.
+// You are given a string s consisting only of lowercase English letters. In one move, you
+// can select any two adjacent characters of s and swap them.
 // Return the minimum number of moves needed to make s a palindrome.
-// Note that the input will be generated such that s can always be converted to a palindrome.
+// Note that the input will be generated such that s can always be converted to a
+// palindrome.
 
 // Example:
-// Input: s = "letelt"
+// Input:  s = "letelt"
 // Output: 2
 
 #include <bits/stdc++.h>

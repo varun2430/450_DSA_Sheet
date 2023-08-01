@@ -1,10 +1,11 @@
-// Given an integer N, find its factorial. return a list of integers denoting the digits that make up the factorial of N.
+// Given an integer N, find its factorial. return a list of integers denoting the digits
+// that make up the factorial of N.
 
 // Example:
-// Input: N = 10
+// Input:  N = 10
 // Output: 3628800
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 void multiply(vector<int> &res, int x)
@@ -39,23 +40,4 @@ vector<int> factorial(int N)
     reverse(res.begin(), res.end());
 
     return res;
-}
-
-void print_vector(vector<int>& v)
-{
-    for(int& num : v)
-    {
-        cout << num;
-    }
-    cout << endl;
-}
-
-
-int main()
-{
-    vector<int> res = factorial(10);
-
-    print_vector(res);
-
-    return 0;
 }

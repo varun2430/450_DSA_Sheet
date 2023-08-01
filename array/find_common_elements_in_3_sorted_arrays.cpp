@@ -1,10 +1,10 @@
-// Given three arrays sorted in increasing order. Find the elements that are common in all three arrays.
+// Given three arrays sorted in increasing order. Find the elements that are common in all
+// three arrays.
 
 // Example:
-// Input:
-// n1 = 6; A = {1, 5, 10, 20, 40, 80}
-// n2 = 5; B = {6, 7, 20, 80, 100}
-// n3 = 8; C = {3, 4, 15, 20, 30, 70, 80, 120}
+// Input:  n1 = 6; A = {1, 5, 10, 20, 40, 80}
+//         n2 = 5; B = {6, 7, 20, 80, 100}
+//         n3 = 8; C = {3, 4, 15, 20, 30, 70, 80, 120}
 // Output: 20 80
 
 #include <bits/stdc++.h>
@@ -13,10 +13,10 @@ using namespace std;
 // O(n1(log(n2*n3)) and constant space can be implemented using binary search
 vector<int> commonElements(int A[], int B[], int C[], int n1, int n2, int n3)
 {
-    int a = 0, b = 0, c = 0;    //  current indices of arrays
+    int a = 0, b = 0, c = 0; //  current indices of arrays
     int preva = INT_MIN, prevb = INT_MIN, prevc = INT_MIN;
-    vector<int> res;
 
+    vector<int> res;
     while ((a < n1) && (b < n2) && (c < n3))
     {
         if ((A[a] == B[b]) && (B[b] == C[c]))
@@ -57,24 +57,4 @@ vector<int> commonElements(int A[], int B[], int C[], int n1, int n2, int n3)
     }
 
     return res;
-}
-
-int main()
-{
-    int A[] = {1, 5, 10, 20, 40, 80};
-    const int n1 = sizeof(A) / sizeof(A[0]);
-    int B[] = {6, 7, 20, 80, 100};
-    const int n2 = sizeof(B) / sizeof(B[0]);
-    int C[] = {3, 4, 15, 20, 30, 70, 80, 120};
-    const int n3 = sizeof(C) / sizeof(C[0]);
-
-    vector<int> res = commonElements(A, B, C, n1, n2, n3);
-
-    for(int& num : res)
-    {
-        cout << num << "  ";
-    }
-    cout << endl;
-
-    return 0;
 }
