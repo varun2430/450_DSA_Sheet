@@ -1,6 +1,13 @@
-#include<iostream>
-#include<vector>
-#include<queue>
+// Given a binary tree, find its level order traversal.
+// Level order traversal of a tree is breadth-first traversal for the tree.
+
+// Example:
+// Input:     1
+//          /   \ 
+//         3     2
+// Output: 1 3 2
+
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node
@@ -20,7 +27,7 @@ vector<int> levelOrder(Node *root)
 {
     vector<int> res;
 
-    queue<Node*> q;
+    queue<Node *> q;
     q.push(root);
 
     while (!q.empty())

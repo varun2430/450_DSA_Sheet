@@ -1,4 +1,14 @@
-#include<iostream>
+// Given a binary tree, find its height.
+
+// Example:
+// Input:  2
+//           \
+//            1
+//           /
+//         3
+// Output: 3
+
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node

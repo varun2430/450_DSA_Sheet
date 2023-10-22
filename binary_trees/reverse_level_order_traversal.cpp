@@ -1,7 +1,13 @@
-#include<iostream>
-#include<vector>
-#include<stack>
-#include<queue>
+// Given a binary tree of size N, find its reverse level order traversal. ie- the traversal
+// must begin from the last level.
+
+// Example:
+// Input : 1
+//       /   \
+//      3     2
+// Output: 3 2 1
+
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node
@@ -21,9 +27,9 @@ vector<int> reverseLevelOrder(Node *root)
 {
     vector<int> res;
 
-    stack<Node*> s;
+    stack<Node *> s;
 
-    queue<Node*> q;
+    queue<Node *> q;
     q.push(root);
 
     while (!q.empty())
@@ -34,7 +40,8 @@ vector<int> reverseLevelOrder(Node *root)
 
         if (tmp->right != nullptr)
         {
-            q.push(tmp->right);     // right is pushed first
+            // right is pushed first
+            q.push(tmp->right);
         }
 
         if (tmp->left != nullptr)
