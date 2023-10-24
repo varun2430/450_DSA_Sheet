@@ -1,12 +1,11 @@
-#include<iostream>
-#include<stack>
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node
 {
     int data;
     Node *left, *right;
- 
+
     Node(int x)
     {
         data = x;
@@ -14,9 +13,9 @@ struct Node
     }
 };
 
-void postorderRecursive(Node* root)
+void postorderRecursive(Node *root)
 {
-    if(root == nullptr)
+    if (root == nullptr)
     {
         return;
     }
@@ -28,36 +27,36 @@ void postorderRecursive(Node* root)
     cout << root->data << " ";
 }
 
-void postorderIterative(Node* root)
+void postorderIterative(Node *root)
 {
-    if(root == nullptr)
+    if (root == nullptr)
     {
         return;
     }
 
-    stack<Node*> s;
+    stack<Node *> s;
     s.push(root);
 
     stack<int> output;
-    while(!s.empty())
+    while (!s.empty())
     {
-        Node* curr = s.top();
+        Node *curr = s.top();
         s.pop();
 
         output.push(curr->data);
 
-        if(curr->left != nullptr)
+        if (curr->left != nullptr)
         {
             s.push(curr->left);
         }
 
-        if(curr->right != nullptr)
+        if (curr->right != nullptr)
         {
             s.push(curr->right);
         }
     }
 
-    while(!output.empty())
+    while (!output.empty())
     {
         cout << output.top() << " ";
         output.pop();

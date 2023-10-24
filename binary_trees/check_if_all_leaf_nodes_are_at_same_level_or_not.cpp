@@ -1,11 +1,19 @@
-#include<bits/stdc++.h>
+// Given a Binary Tree, check if all leaves are at same level or not.
+
+// Example:
+// Input:      1
+//           /   \
+//          2     3
+// Output: 1
+
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node
 {
     int data;
-    Node* left;
-    Node* right;
+    Node *left;
+    Node *right;
 };
 
 bool check(Node *root)

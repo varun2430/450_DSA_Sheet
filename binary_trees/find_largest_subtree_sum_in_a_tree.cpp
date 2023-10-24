@@ -1,4 +1,14 @@
-#include<bits/stdc++.h>
+// Given a binary tree, task is to find subtree with maximum sum in tree.
+
+// Examples:
+// Input:         1
+//             /    \
+//           -2      3
+//           / \    /  \
+//          4   5  -6   2
+// Output : 7
+
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node

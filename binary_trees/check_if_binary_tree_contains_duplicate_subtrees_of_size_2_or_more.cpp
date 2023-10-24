@@ -1,4 +1,18 @@
-#include<bits/stdc++.h>
+// Given a binary tree, find out whether it contains a duplicate sub-tree of size two or
+// more, or not.
+// Note: Two same leaf nodes are not considered as subtree as size of a leaf node is one.
+
+// Example:
+// Input:         1
+//              /   \ 
+//            2       3
+//          /   \       \    
+//         4     5       2
+//                      /  \    
+//                     4    5
+// Output: 1
+
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node

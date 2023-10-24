@@ -1,4 +1,11 @@
-#include<bits/stdc++.h>
+// Given 2 Arrays of Inorder and preorder traversal. The tree can contain duplicate elements.
+// Construct a tree and print the Postorder traversal.
+
+// Example:
+// Input:  N=4    inorder[] = {1 6 8 7}    preorder[] = {1 6 7 8}
+// Output: 8 7 6 1
+
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node

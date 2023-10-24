@@ -1,12 +1,11 @@
-#include<iostream>
-#include<stack>
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node
 {
     int data;
     Node *left, *right;
- 
+
     Node(int x)
     {
         data = x;
@@ -14,9 +13,9 @@ struct Node
     }
 };
 
-void preorderRecursive(Node* root)
+void preorderRecursive(Node *root)
 {
-    if(root == nullptr)
+    if (root == nullptr)
     {
         return;
     }
@@ -28,30 +27,30 @@ void preorderRecursive(Node* root)
     preorderRecursive(root->right);
 }
 
-void preorderIterative(Node* root)
+void preorderIterative(Node *root)
 {
-    if(root == nullptr)
+    if (root == nullptr)
     {
         return;
     }
 
-    stack<Node*> s;
+    stack<Node *> s;
     s.push(root);
 
-    while(!s.empty())
+    while (!s.empty())
     {
-        Node* curr = s.top();
+        Node *curr = s.top();
         s.pop();
 
         cout << curr->data << " ";
 
         // push right first so that it gets poped last
-        if(curr->right != nullptr)
+        if (curr->right != nullptr)
         {
             s.push(curr->right);
         }
 
-        if(curr->left != nullptr)
+        if (curr->left != nullptr)
         {
             s.push(curr->left);
         }

@@ -1,4 +1,18 @@
-#include<bits/stdc++.h>
+// Given a binary tree of size N. Your task is to complete the function
+// sumOfLongRootToLeafPath(), that find the sum of all nodes on the longest path from root
+// to leaf node.
+// If two or more paths compete for the longest path, then the path having maximum sum of
+// nodes is being considered.
+
+// Example:
+// Input:        1
+//             /   \
+//            2     3
+//           / \   / \
+//          4   5 6   7
+// Output: 11
+
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node

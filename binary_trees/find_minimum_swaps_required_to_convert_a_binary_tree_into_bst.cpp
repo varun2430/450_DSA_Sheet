@@ -1,4 +1,12 @@
-#include<bits/stdc++.h>
+// Given the array representation of Complete Binary Tree i.e, if index i is the parent,
+// index 2*i + 1 is the left child and index 2*i + 2 is the right child. The task is to find
+// the minimum number of swap required to convert it into Binary Search Tree.
+
+// Example:
+// Input:  arr[] = { 5, 6, 7, 8, 9, 10, 11 }
+// Output: 3
+
+#include <bits/stdc++.h>
 using namespace std;
 
 // first perform inorder treversal on binary tree
