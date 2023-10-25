@@ -1,3 +1,16 @@
+// Given a binary tree and two node values your task is to find the minimum distance between
+// them.
+// The given two nodes are guaranteed to be in the binary tree and nodes are numbered from
+// 1 to N.
+// Please Note that a and b are not always leaf node.
+
+// Example:
+// Input: a = 2, b = 3
+//         1
+//       /  \
+//      2    3
+// Output: 2
+
 #include <bits/stdc++.h>
 using namespace std;
 
